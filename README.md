@@ -25,6 +25,10 @@ simulates price divergence and supply anomalies on Solana Devnet.
 The user’s private key remains in the wallet. The keeper uses a separate,
 restricted execution key, so the user does not need to run a server 24/7.
 
+[Watch the HoldSafe demo on YouTube](https://youtu.be/Obe3g8MO9ag)
+
+![HoldSafe demo preview](docs/hold-safe-demo.gif)
+
 ## Extensible protection
 
 Future adapters could extend HoldSafe to other assets, positions and chains. Triggers can
@@ -68,9 +72,3 @@ bun run demo:build
 See [Devnet setup and limitations](docs/29_DEVNET_DEMO.md). Run the configured service with `bun start`. The Devnet demo requires the protected local
 fixture configuration described in the deployment files. Never commit wallet
 keys, credentials, databases, or generated build output.
-
-## Demo video
-
-[Watch the HoldSafe demo on YouTube](https://youtu.be/Obe3g8MO9ag)
-
-![HoldSafe demo preview](docs/hold-safe-demo.gif)
