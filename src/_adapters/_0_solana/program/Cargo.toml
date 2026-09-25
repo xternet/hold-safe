@@ -1,0 +1,33 @@
+[package]
+name = "solstock-guard"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+anchor-lang = "=0.32.1"
+anchor-spl = { version = "=0.32.1", default-features = false, features = ["token", "token_2022"] }
+
+[features]
+default = ["no-idl"]
+devnet-demo = []
+no-idl = []
+no-entrypoint = []
+cpi = ["no-entrypoint"]
+no-log-ix-name = []
+custom-heap = []
+custom-panic = []
+anchor-debug = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = ['cfg(target_os, values("solana"))']

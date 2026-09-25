@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "chains": [
+    {
+      "id": "solana-v1",
+      "chain": {
+        "namespace": "solana",
+        "reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d"
+      },
+      "profiles": [
+        "xstock-scaled-v1",
+        "spl-classic-v1"
+      ],
+      "venues": [
+        "raydium-clmm-v1"
+      ]
+    }
+  ],
+  "feeds": [
+    {
+      "id": "alpaca-sip",
+      "instruments": [
+        "AAPL"
+      ],
+      "coverage": "consolidated"
+    },
+    {
+      "id": "kraken-usd",
+      "instruments": [
+        "USDC/USD"
+      ],
+      "coverage": "venue"
+    }
+  ],
+  "assets": [
+    {
+      "ref": {
+        "chain": {
+          "namespace": "solana",
+          "reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d"
+        },
+        "address": "XsbEhLAtcf6HdfpFZ5xEMdqW8nfAvcsP5bdudRLJzJp"
+      },
+      "symbol": "AAPLx",
+      "decimals": 8,
+      "profile": "xstock-scaled-v1",
+      "reference": {
+        "provider": "alpaca-sip",
+        "instrument": "AAPL",
+        "currency": "USD",
+        "coverage": "consolidated"
+      },
+      "evidenceHash": "d96dddc9cb54aaf2725fdd9d24bf3ce206fa452eadfe55d25da302732503da53"
+    },
+    {
+      "ref": {
+        "chain": {
+          "namespace": "solana",
+          "reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d"
+        },
+        "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+      },
+      "symbol": "USDC",
+      "decimals": 6,
+      "profile": "spl-classic-v1",
+      "reference": {
+        "provider": "kraken-usd",
+        "instrument": "USDC/USD",
+        "currency": "USD",
+        "coverage": "venue"
+      },
+      "evidenceHash": "a08984392d463fd5e4b42a69f2c3124de7b9e35ed7c8e309280306ec16f64ead"
+    }
+  ],
+  "routes": [
+    {
+      "id": "raydium-clmm:aaplx-usdc:v1",
+      "chain": {
+        "namespace": "solana",
+        "reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d"
+      },
+      "input": {
+        "chain": {
+          "namespace": "solana",
+          "reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d"
+        },
+        "address": "XsbEhLAtcf6HdfpFZ5xEMdqW8nfAvcsP5bdudRLJzJp"
+      },
+      "output": {
+        "chain": {
+          "namespace": "solana",
+          "reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d"
+        },
+        "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+      },
+      "adapter": "solana-v1",
+      "venue": "raydium-clmm-v1",
+      "pool": "CKwJZwm7oj3nu4653N1EpDrqXbXAYXoPFiPeEnLouF8y",
+      "program": "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK",
+      "programVersion": "slot:439846317:sha256:c8fa1d9f02c63123c118b27a96a4e73ec4c015f16b093872afceb7657bfac4b0",
+      "guardVersion": "solstock-guard-v1",
+      "evidenceHash": "a8e4d6f9cb478d9840292f3ed5055f3bd38c2557d4582113e16a0d3bf2bd2c6c"
+    }
+  ]
+}

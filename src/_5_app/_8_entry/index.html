@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HoldSafe · Choose a demo</title>
+<style>
+:root{color-scheme:dark;font-family:Inter,system-ui,sans-serif;background:#111115;color:#eeeaf5}
+*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}
+header{padding:28px 6%;font-weight:750;font-size:23px}
+main{max-width:1160px;margin:9vh auto 60px;padding:24px}
+.intro{text-align:center;margin-bottom:40px}h1{font-size:clamp(30px,4vw,44px);line-height:1.15;letter-spacing:-1.5px;font-weight:650;margin:0 0 16px}.intro p{font-size:16px}
+.choices{display:grid;grid-template-columns:repeat(2,1fr);width:max-content;max-width:100%;margin-inline:auto;justify-content:center;gap:16px}
+.choice{display:flex;flex-direction:column;justify-content:flex-start;border:1px solid #59416f;border-radius:24px;padding:20px;background:#1a181f;transition:border-color .2s,background .2s}
+.choice:hover{border-color:#c5a0f5;background:#211b2a}.choice:focus-visible{outline:3px solid #bc9bf5;outline-offset:5px}
+.choice.live{border-color:#315d53}.choice.live:hover{border-color:#74dcc0;background:#182521}
+h2{text-align:center;font-size:clamp(23px,2.5vw,28px);letter-spacing:-1px;margin:0 0 20px;color:#c9a6f6}.live h2{color:#74dcc0}
+p{font-size:14px;color:#ada6b8;line-height:1.7;margin:0}.prerequisite{margin-bottom:12px}.choice p{white-space:nowrap}
+@media(max-width:1050px){main{max-width:620px}.choices{grid-template-columns:1fr}}
+@media(max-width:480px){.choice p{font-size:clamp(9px,2.7vw,13px)}}
+@media(max-width:620px){main{margin:3vh auto 30px;padding:16px}.intro{margin-bottom:28px}.intro p{font-size:14px}.choices{grid-template-columns:1fr;gap:16px}.choice{padding:16px}}
+html{scrollbar-gutter:stable}header{height:92px;padding:0 48px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:10px;align-items:center;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:23px;font-weight:750;letter-spacing:-1px;color:#eeeaf7;text-decoration:none}.brand svg{width:30px;height:34px;color:#8664cf}@media(max-width:600px){header{height:76px;padding:0 16px}.brand{font-size:19px}.brand svg{width:25px}}
+</style>
+</head>
+<body>
+<header><a class="brand" href="/tmp/app" aria-label="HoldSafe home"><svg viewBox="0 0 30 34" fill="none" aria-hidden="true"><path d="M15 2 27 7v9c0 8-12 15-12 15S3 24 3 16V7L15 2Z" stroke="currentColor" stroke-width="2.6"/><path d="m10 16 3.5 3.5L21 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>HoldSafe</a></header>
+<main><div class="intro"><h1>Protect your assets. Automatically.</h1><p>Choose your risk signals. We handle the exit.</p></div><div class="choices">
+<a class="choice" href="/tmp/app/replay"><h2>DEMO · NO WALLET</h2><p class="prerequisite">Requirements: <strong>None.</strong></p><p>Replay recorded exit without sending transactions.</p></a>
+<a class="choice live" href="/tmp/app/live"><h2>DEMO · DEVNET</h2><p class="prerequisite">Requirements: <strong>Solflare wallet &amp; 0.03 SOL on Devnet.</strong></p><p>Protect your funds and simulate risk triggers on the Blockchain.</p></a>
+</div></main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+[Unit]
+Description=HoldSafe isolated Devnet judge demo
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/agents/src/solana/hold-safe
+Environment=SOLSTOCK_DEMO=devnet
+Environment=SOLSTOCK_DEMO_ALPACA_FILE=/agents/src/solana/hold-safe/secrets/demo-alpaca.json
+Environment=SOLSTOCK_DEMO_ENV=/srv/cold/solstock-guard/m01-20260923-01/devnet-environment.json
+Environment=SOLSTOCK_DEMO_ORIGIN=http://162.55.92.121:3000
+ExecStart=/home/multi/.bun/bin/bun src/root.ts
+Restart=on-failure
+RestartSec=10
+MemoryMax=1G
+CPUQuota=200%
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

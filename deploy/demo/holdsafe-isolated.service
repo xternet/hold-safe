@@ -1,0 +1,38 @@
+[Unit]
+Description=HoldSafe isolated Devnet review
+After=network-online.target
+
+[Service]
+Type=simple
+User=holdsafe
+Group=holdsafe
+WorkingDirectory=/srv/holdsafe/review
+Environment=SOLSTOCK_DEMO=devnet
+Environment=SOLSTOCK_DEMO_ALPACA_FILE=/var/lib/holdsafe/demo-alpaca.json
+Environment=SOLSTOCK_DEMO_ENV=/var/lib/holdsafe/environment.json
+Environment=SOLSTOCK_DEMO_ORIGIN=https://holdsafe.xyz
+ExecStart=/usr/local/lib/holdsafe/bun src/root.ts
+Restart=on-failure
+RestartSec=10
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+InaccessiblePaths=/agents /srv/cold
+ReadWritePaths=/var/lib/holdsafe
+MemoryMax=1G
+CPUQuota=200%
+TasksMax=64
+
+[Install]
+WantedBy=multi-user.target

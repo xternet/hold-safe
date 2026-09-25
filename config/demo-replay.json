@@ -1,0 +1,204 @@
+{
+  "network": "devnet",
+  "description": "Historical confirmed runs. Replay never submits transactions.",
+  "cases": [
+    {
+      "policy": {
+        "schema": 1,
+        "chain": {
+          "namespace": "solana",
+          "reference": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG"
+        },
+        "orderId": "b840d00184b48c437731d4fe1b65cc1673c9fdaf60d080fe57e7ce28d242f1a4",
+        "owner": "6hZTcL9chg14fNVuwtkPBCWJe27UM4MunVdSDm4djGm8",
+        "keeper": "Hib3q3EQYFKK5vgt1JmMyk3FegYDGsm8Q9VErJxbL74W",
+        "source": "5mfFEFDowMNLueQ424rkn6UjcziwkXif3azJum266a2G",
+        "input": {
+          "chain": {
+            "namespace": "solana",
+            "reference": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG"
+          },
+          "address": "3GpMzB5Pay6xFTBVa6cvsS3NgaJeuDzLYnWWnJ4CkMeA"
+        },
+        "output": {
+          "chain": {
+            "namespace": "solana",
+            "reference": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG"
+          },
+          "address": "7apSGhTb5doJUo26C5FwrLE2APDTZ7GkNuSHeW2LEuuB"
+        },
+        "amountRaw": "100000000",
+        "recipient": "AWtkuvcoBD5UqijKVgxQcBGtp22jXK4nNPHc6MAiGUjM",
+        "minimumOutputRaw": "175000000",
+        "slippageBps": 100,
+        "expiresAt": 1790359220,
+        "guard": "Az4M4V4fFC2ZxNb3SwbSmWWKmXD66HhCFmaduKJDqcA4",
+        "guardVersion": "solstock-guard-v1",
+        "routeId": "raydium-clmm:demoAAPL-demoUSD:v1",
+        "rule": {
+          "id": "demo-risk",
+          "version": 2,
+          "protections": {
+            "priceDrop": true,
+            "supplySpike": true
+          },
+          "thresholdBps": 300,
+          "persistenceMs": 3000,
+          "maxAgeMs": 5000,
+          "maxSkewMs": 2000,
+          "maxImpactBps": 300,
+          "maxOutputDeviationBps": 100,
+          "supplyBaselineRaw": "305017926400",
+          "referenceMode": "replay"
+        },
+        "coverage": {
+          "inputProfile": "xstock-scaled-v1",
+          "outputProfile": "spl-classic-v1",
+          "inputReference": {
+            "provider": "alpaca-iex",
+            "instrument": "AAPL",
+            "currency": "USD",
+            "coverage": "venue"
+          },
+          "outputReference": {
+            "provider": "demo-usd",
+            "instrument": "DEMO/USD",
+            "currency": "USD",
+            "coverage": "venue"
+          },
+          "venue": "raydium-clmm-v1",
+          "pool": "6k79iijMarTLC5qTqT19U8Fqb25YzY6C1xnN7nKvnfUJ",
+          "program": "DRayAUgENGQBKVaX8owNhgzkEDyoHTGVEGHVJT1E9pfH",
+          "programVersion": "slot:502939373:sha256:f93c79d5c2f5e12b6706c3474bed813212a541ab6db7776de8a52ca37503f1ed"
+        }
+      },
+      "baselineSupply": "305017926400",
+      "before": {
+        "stockRaw": "1000000000",
+        "usdRaw": "5352394309"
+      },
+      "after": {
+        "stockRaw": "900000000",
+        "usdRaw": "5574428410"
+      },
+      "scenario": "collapse",
+      "recordedAt": "2026-09-24T18:01:56.000Z",
+      "amountRaw": "100000000",
+      "proceedsRaw": "222034101",
+      "owner": "6hZTcL9chg14fNVuwtkPBCWJe27UM4MunVdSDm4djGm8",
+      "receipts": [
+        {
+          "kind": "authorize",
+          "signature": "TcLahp9jENiKCn6K5zHfbtsFZGLFfrGyHSRYdfKnf2U8XyHfDkbqBYPTmPhPwSS56nfknVExJnF8qRXx7z5oUYe"
+        },
+        {
+          "kind": "price-collapse",
+          "signature": "aR1hYgBt1URw5kDiMvsP7vDFXb26bfhtX4uUU3DEhRVdkXWQbHMW81b3VG4umdYMyWceoh3T5fYhUqG3dEdTCJj"
+        },
+        {
+          "kind": "guard-exit",
+          "signature": "9EBFrRGZwK5ZzKwiURmUbPoNSLNH94HgJMVF9mYV5o5y9iEE7JYpzdwoDLCU3ixUQdtaSD1Z8gjd49vkUiZZwM3"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "schema": 1,
+        "chain": {
+          "namespace": "solana",
+          "reference": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG"
+        },
+        "orderId": "3586b57e18c2964bd6c24a7d1abba4321926cf7929e3ca10b52d34dc8a5880f9",
+        "owner": "6hZTcL9chg14fNVuwtkPBCWJe27UM4MunVdSDm4djGm8",
+        "keeper": "Hib3q3EQYFKK5vgt1JmMyk3FegYDGsm8Q9VErJxbL74W",
+        "source": "5mfFEFDowMNLueQ424rkn6UjcziwkXif3azJum266a2G",
+        "input": {
+          "chain": {
+            "namespace": "solana",
+            "reference": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG"
+          },
+          "address": "3GpMzB5Pay6xFTBVa6cvsS3NgaJeuDzLYnWWnJ4CkMeA"
+        },
+        "output": {
+          "chain": {
+            "namespace": "solana",
+            "reference": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG"
+          },
+          "address": "7apSGhTb5doJUo26C5FwrLE2APDTZ7GkNuSHeW2LEuuB"
+        },
+        "amountRaw": "100000000",
+        "recipient": "AWtkuvcoBD5UqijKVgxQcBGtp22jXK4nNPHc6MAiGUjM",
+        "minimumOutputRaw": "175000000",
+        "slippageBps": 100,
+        "expiresAt": 1790359156,
+        "guard": "Az4M4V4fFC2ZxNb3SwbSmWWKmXD66HhCFmaduKJDqcA4",
+        "guardVersion": "solstock-guard-v1",
+        "routeId": "raydium-clmm:demoAAPL-demoUSD:v1",
+        "rule": {
+          "id": "demo-risk",
+          "version": 2,
+          "protections": {
+            "priceDrop": true,
+            "supplySpike": true
+          },
+          "thresholdBps": 300,
+          "persistenceMs": 3000,
+          "maxAgeMs": 5000,
+          "maxSkewMs": 2000,
+          "maxImpactBps": 300,
+          "maxOutputDeviationBps": 100,
+          "supplyBaselineRaw": "254098272000",
+          "referenceMode": "replay"
+        },
+        "coverage": {
+          "inputProfile": "xstock-scaled-v1",
+          "outputProfile": "spl-classic-v1",
+          "inputReference": {
+            "provider": "alpaca-iex",
+            "instrument": "AAPL",
+            "currency": "USD",
+            "coverage": "venue"
+          },
+          "outputReference": {
+            "provider": "demo-usd",
+            "instrument": "DEMO/USD",
+            "currency": "USD",
+            "coverage": "venue"
+          },
+          "venue": "raydium-clmm-v1",
+          "pool": "6k79iijMarTLC5qTqT19U8Fqb25YzY6C1xnN7nKvnfUJ",
+          "program": "DRayAUgENGQBKVaX8owNhgzkEDyoHTGVEGHVJT1E9pfH",
+          "programVersion": "slot:502939373:sha256:f93c79d5c2f5e12b6706c3474bed813212a541ab6db7776de8a52ca37503f1ed"
+        }
+      },
+      "baselineSupply": "254098272000",
+      "before": {
+        "stockRaw": "1000000000",
+        "usdRaw": "5103744435"
+      },
+      "after": {
+        "stockRaw": "900000000",
+        "usdRaw": "5352394309"
+      },
+      "scenario": "mint",
+      "recordedAt": "2026-09-24T17:59:48.000Z",
+      "amountRaw": "100000000",
+      "proceedsRaw": "248649874",
+      "owner": "6hZTcL9chg14fNVuwtkPBCWJe27UM4MunVdSDm4djGm8",
+      "receipts": [
+        {
+          "kind": "authorize",
+          "signature": "sNcbKVZZH6GqZerHkJrau7iZSVW5qv1ygwJF2G26TEHDEjZELDJc1k4JYkkqJLGa1qjrTMUqYim4ED7rTp4ehK4"
+        },
+        {
+          "kind": "mint-anomaly",
+          "signature": "3rp9bQkmT3yxiWpLoMgjfR4LUvhDzTWCMF21TyZ7P4tJiMTmDy6Gx9XE4LWiQQwixcMdG2xc8ZHSgkiEtaRaUgaA"
+        },
+        {
+          "kind": "guard-exit",
+          "signature": "4RSnvYSWzsG21Z2YMdGofYRUkvg6ovh91Z26SsAFaBPWRxk7TFyzVXhr57jgAWZjjgfEmT66WqLnBkZmidkd7PBU"
+        }
+      ]
+    }
+  ]
+}
